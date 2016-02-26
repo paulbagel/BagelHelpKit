@@ -7,7 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
-#import <Smooch/Smooch.h>
+@import Smooch
 
 /**
  *  @discussion Filtering mode to use with the -excludeSearchResultsIf:categories:sections: API of SHKSettings.
