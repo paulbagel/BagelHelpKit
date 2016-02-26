@@ -257,9 +257,7 @@ static NSString* const kSmoochWasLaunched = @"SKTSupportKitWasLaunched";
     static NSBundle* frameworkBundle = nil;
     static dispatch_once_t predicate;
     dispatch_once(&predicate, ^{
-        NSString* mainBundlePath = [[NSBundle mainBundle] resourcePath];
-        NSString* frameworkBundlePath = [mainBundlePath stringByAppendingPathComponent:@"SHKResources.bundle"];
-        frameworkBundle = [NSBundle bundleWithPath:frameworkBundlePath];
+        frameworkBundle = [NSBundle bundleForClass:self];
     });
     return frameworkBundle;
 }
